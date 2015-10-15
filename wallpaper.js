@@ -1,17 +1,12 @@
-// var new_img = document.getElementsByClassName('apod')[0];
-// document.body.style.background = "url('http://apod.nasa.gov/apod/image/1510/tle_dierickD8D_1002ozoneC.jpg') center fixed";
-
-
-function setImage() {
-	$.get('http://apod.nasa.gov/apod/astropix.html', function(data) {
-		var parser = new DOMParser();
-		var doc = parser.parseFromString(data, 'text/html');
-		var x = doc.querySelector('img')
-		img2 = $(x).attr('src');
-		console.log(img2);
-		var new_img = document.getElementsByClassName('apod')[0];
-		document.body.style.background = "url('http://apod.nasa.gov/apod/" + img2 + "') no-repeat center center fixed";
-	});
+function setBackgroundImage() {
+    $.get('http://apod.nasa.gov/apod/astropix.html', function(data) {
+        var parser = new DOMParser();
+        var doc = parser.parseFromString(data, 'text/html');
+        var img_link = doc.querySelectorAll('a')[1];
+        var img_url = "http://apod.nasa.gov/apod/" + $(img_link).attr('href');
+        var new_img = document.getElementsByClassName('apod')[0];
+        document.body.style.background = "url('" + img_url + "') no-repeat center center fixed";
+    });
 }
 
-$(document).ready(setImage());
+$(document).ready(setBackgroundImage());
