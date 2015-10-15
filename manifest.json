@@ -1,14 +1,23 @@
 {
-
-  "name": "Space Cadet",
-  "manifest_version": 2,
-  "version": "1.0.0",
-  "description": "Showcase the NASA apod as Chrome wallpaper",
-  "chrome_url_overrides" : {
-    "newtab": "newtab.html"
-  },
-  "permissions": [
-    "management"
-  ]
-
+    "name": "Space Cadet",
+    "manifest_version": 2,
+    "version": "1.0.0",
+    "description": "Showcase the NASA apod as Chrome wallpaper",
+    "chrome_url_overrides": {
+        "newtab": "newtab.html"
+    },
+    "permissions": [
+        "https://*/",
+        "http://*/",
+        "management"
+    ],
+    "content_scripts": [{
+        "js": [
+            "jquery.min.js",
+            "wallpaper.js"
+        ],
+        "matches": [
+            "<all_urls>"
+        ]
+    }]
 }
