@@ -1,6 +1,34 @@
-#pix {
+body {
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+    font-family: 'Montserrat', 'Georgia';
+    color: white;
+}
+
+#clock {
+    font-size: 5em;
+    font-weight: bold;
+    color: white;
+    /* color: black;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black; */
+}
+
+#source {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+}
+
+a {
+    color: white;
+    font-style: normal;
+    font-size: 1.2em;
+}
+
+a:hover {
+    color: lightblue;
 }

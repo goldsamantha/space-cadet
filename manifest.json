@@ -7,9 +7,6 @@
         "newtab": "newtab.html"
     },
     "permissions": [
-        "https://*/",
-        "http://*/",
-        "management"
     ],
     "content_scripts": [{
         "js": [
