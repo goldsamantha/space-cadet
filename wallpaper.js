@@ -12,7 +12,12 @@ function updateClock() {
     var date = new Date();
     var date_today = date.toLocaleString(undefined, {month: "long", day: "numeric", year: "numeric"});
     var time_now = date.toLocaleTimeString(undefined, {hour: "numeric", minute: "numeric", second: "numeric"});
-    document.getElementById('clock').innerHTML = time_now + "<br>" + date_today;
+    var period = time_now.slice(time_now.length-2, time_now.length);
+    var time_now = time_now.slice(0, time_now.length-3);
+
+    document.getElementById('time').innerHTML   = time_now;
+    document.getElementById('date').innerHTML   = date_today;
+    document.getElementById('period').innerHTML = period;
     setTimeout(updateClock, 100);
 }
 
