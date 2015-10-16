@@ -9,34 +9,31 @@ body {
     margin: 0;
 }
 
-.clock{
+.clock {
     font-size: 5em;
     font-weight: bold;
     color: white;
-    /* color: black;
-    -webkit-text-fill-color: white;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black; */
 }
 
-.container{
+.container {
   padding: 80px 0px 0px 60px;
 }
 
-#time, #period{
+#time, #period {
   display: inline-block;
 }
 
-#time{
+#period {
+    padding-left: 5px;
+}
+
+#time {
   width: 225px;
 }
 
 #source {
   position: absolute;
   bottom: 50px;
-    /*position: fixed;
-    bottom: 15px;
-    left: 15px;*/
 }
 
 a {
