@@ -16,7 +16,8 @@
             "wallpaper.js"
         ],
         "matches": [
-            "*://apod.nasa.gov/"
+            "*://apod.nasa.gov/",
+            "*://api.wunderground.com/*"
         ]
     }]
 }

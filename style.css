@@ -1,6 +1,7 @@
 body {
-    background: url('bloodmoon.jpg');
+/*    background: url('bloodmoon.jpg');*/
     background-size: cover;
+    background-color: black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
