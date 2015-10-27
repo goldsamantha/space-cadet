@@ -1,12 +1,14 @@
 {
     "name": "Space Cadet",
+    "author": "Weston Vial and Samantha Goldstein",
     "manifest_version": 2,
     "version": "1.0.0",
-    "description": "Showcase the NASA apod as Chrome wallpaper",
+    "description": "Showcase the NASA Astronomical Photo of the Day as Chrome wallpaper",
     "chrome_url_overrides": {
         "newtab": "newtab.html"
     },
     "permissions": [
+        "geolocation"
     ],
     "content_scripts": [{
         "js": [
@@ -14,7 +16,7 @@
             "wallpaper.js"
         ],
         "matches": [
-            "<all_urls>"
+            "*://apod.nasa.gov/"
         ]
     }]
 }
