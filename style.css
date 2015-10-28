@@ -7,11 +7,13 @@ body {
     -o-background-size: cover;
     font-family: 'Montserrat', 'Georgia';
     color: white;
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
+    text-shadow: 0 0 0.4em black;
 }
 
 .clock {
+    text-shadow: 0 0 0.4em black;
     font-size: 5em;
     font-weight: bold;
     color: white;
@@ -19,6 +21,9 @@ body {
 
 .container {
   padding: 80px 0px 0px 60px;
+  margin-left: auto;
+  margin-right: auto;
+  /*background-color: black; */
 }
 
 #time, #period {
@@ -36,12 +41,20 @@ body {
 #source {
   position: absolute;
   bottom: 50px;
+  left: 25px;
+}
+
+#weather {
+  position: absolute;
+  bottom: 50px;
+  right: 25px;
 }
 
 a {
     color: white;
     font-style: normal;
     font-size: 1.2em;
+    text-decoration: none;
 }
 
 a:hover {
