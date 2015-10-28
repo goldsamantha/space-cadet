@@ -34,6 +34,7 @@ function getGeolocation() {
 
 function getWeather(lat, long) {
     if (lat === undefined || long === undefined) {
+        document.getElementById('weather').innerHTML = '<a href="wunderground.com">Weather unavailable</a>';
         return;
     }
     // Get weather data
@@ -51,6 +52,7 @@ function getWeather(lat, long) {
                 location += ", " + j['location']['state'];
             } else {
                 location += ", " + j['location']['country'];
+                temp = j['current_observation']['temp_c'];
             }
             var weatherUrl = j['current_observation']['ob_url'];
             var html = '<a href="' + weatherUrl + '">';
@@ -69,9 +71,9 @@ function updateClock() {
     var period = now.slice(now.length-2, now.length);
     var now = now.slice(0, now.length-3);
 
-    document.getElementById('time').innerHTML = now;
+    document.getElementById('time').innerHTML = now + ' ' + period;
     document.getElementById('date').innerHTML = today;
-    document.getElementById('period').innerHTML = period;
+//    document.getElementById('period').innerHTML = period;
     setTimeout(updateClock, 100);
 }
 
