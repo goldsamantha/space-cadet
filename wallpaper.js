@@ -11,6 +11,7 @@ function setBackgroundImage() {
         if (urlExtension === '.jpg') {
             var imgUrl = "http://apod.nasa.gov/apod/" + $(imgLink).attr('href');
             document.body.style.background = "url('" + imgUrl + "') no-repeat center center fixed";
+            $("body").css("background-size", "cover");
             document.getElementById('source').innerHTML = sourceHtml;
         } else {
             document.body.style.background = "url('bloodmoon.jpg') no-repeat center center fixed";
@@ -80,7 +81,7 @@ function updateClock() {
 document.addEventListener('DOMContentLoaded', function() {
     updateClock();
     getGeolocation();
-//    getWeather();
+  //  getWeather();
 });
 
 $(document).ready(setBackgroundImage());
