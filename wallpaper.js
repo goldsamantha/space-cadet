@@ -11,12 +11,12 @@ function setBackgroundImage() {
         if (urlExtension === '.jpg') {
             var imgUrl = "http://apod.nasa.gov/apod/" + $(imgLink).attr('href');
             document.body.style.background = "url('" + imgUrl + "') no-repeat center center fixed";
-            $("body").css("background-size", "cover");
             document.getElementById('source').innerHTML = sourceHtml;
         } else {
-            document.body.style.background = "url('bloodmoon.jpg') no-repeat center center fixed";
+            document.body.style.background = "url('http://apod.nasa.gov/apod/image/1510/tle_dierickD8D_1002ozoneC1024.jpg') no-repeat center center fixed";
             document.getElementById('source').innerHTML = '<a href="http://apod.nasa.gov/apod/ap151003.html">A Blue Blood Moon</a><br>' + sourceHtml;
         }
+        $("body").css("background-size", "cover");
     });
 }
 
@@ -80,8 +80,8 @@ function updateClock() {
 
 document.addEventListener('DOMContentLoaded', function() {
     updateClock();
-    getGeolocation();
-  //  getWeather();
+    // getGeolocation();
+//    getWeather();
 });
 
 $(document).ready(setBackgroundImage());
